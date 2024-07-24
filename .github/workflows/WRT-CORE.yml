@@ -230,7 +230,15 @@ jobs:
 
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
           fi
-
+          
+      - name: Create compress files
+        run: |
+          cd ./wrt/ && mkdir ./upload/packages/
+          mv -f   $(find ./bin/packages/ -iname "*alist*")  ./upload/packages
+          mv -f   $(find ./bin/packages/ -iname "*mosdns*")  ./upload/packages
+          mv -f   $(find ./bin/packages/ -iname "*ddns-go*")  ./upload/packages
+          tar -zcvf packages.tar.gz -C /upload/packages .
+          
       - name: Release Firmware
         uses: softprops/action-gh-release@master
         with:
