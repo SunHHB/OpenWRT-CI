@@ -90,6 +90,7 @@ jobs:
           sudo -E apt -yqq clean
           sudo -E apt -yqq install dos2unix
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
+          sudo -E apt -yqq install libfuse-dev
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
 
@@ -158,6 +159,10 @@ jobs:
           cd ./wrt/
 
           ./scripts/feeds update -a
+          #update go1.22
+          rm -rf feeds/packages/lang/golang
+          git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+          
           ./scripts/feeds install -a
 
       - name: Custom Packages
