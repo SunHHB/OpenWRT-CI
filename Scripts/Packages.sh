@@ -24,6 +24,7 @@ UPDATE_PACKAGE() {
 UPDATE_PACKAGE "argon" "jerrykuku/luci-theme-argon" "$([[ $WRT_REPO == *"lede"* ]] && echo "18.06" || echo "master")"
 UPDATE_PACKAGE "design" "0x676e67/luci-theme-design" "$([[ $WRT_REPO == *"lede"* ]] && echo "main" || echo "js")"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "$([[ $WRT_REPO == *"lede"* ]] && echo "main" || echo "js")"
+#MY PACKAGE github
 UPDATE_PACKAGE "alist" "SunHHB/luci-app-alist" "master"
 UPDATE_PACKAGE "ddns-go" "SunHHB/luci-app-ddns-go" "master"
 UPDATE_PACKAGE "ddns-go" "SunHHB/luci-app-ddns-go" "master"
