@@ -27,7 +27,7 @@ UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "$([[ $WRT_REPO == *"lede"* ]
 #MY PACKAGE github
 UPDATE_PACKAGE "alist" "SunHHB/luci-app-alist" "master"
 UPDATE_PACKAGE "ddns-go" "SunHHB/luci-app-ddns-go" "master"
-UPDATE_PACKAGE "ddns-go" "SunHHB/luci-app-ddns-go" "master"
+UPDATE_PACKAGE "mosdns" "SunHHB/luci-app-mosdns" "master"
 
 #UPDATE_PACKAGE "advancedplus" "VIKINGYFY/luci-app-advancedplus" "main"
 #UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
