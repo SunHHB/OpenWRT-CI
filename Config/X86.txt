@@ -8,6 +8,3 @@ CONFIG_GRUB_IMAGES=y
 CONFIG_VMDK_IMAGES=y
 #插件调整
 CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_luci-app-alist=y
-CONFIG_PACKAGE_luci-app-ddns-go=y
-CONFIG_PACKAGE_luci-app-mosdns=y
