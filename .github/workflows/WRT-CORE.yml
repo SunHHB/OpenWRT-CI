@@ -212,7 +212,7 @@ jobs:
 
       - name: Package Firmware
         run: |
-          cd ./wrt/ && mkdir ./upload/ && mkdir ./upload/packages/
+          cd ./wrt/ && mkdir ./upload/ && mkdir -p ./upload/packages/
 
           cp -f ./.config ./upload/Config_"$WRT_TARGET"_"$WRT_VER"_"$WRT_DATE".txt
 
