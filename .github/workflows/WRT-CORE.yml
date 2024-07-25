@@ -213,9 +213,9 @@ jobs:
       - name: Package Firmware
         run: |
           cd ./wrt/ && mkdir -p ./upload/packages/
-          find ./bin/packages/ -iname "*alist*" -exec mv -f {} /upload/packages/ \;.
-          find ./bin/packages/ -iname "*mosdns*" -exec mv -f {} /upload/packages/ \;.
-          find ./bin/packages/ -iname "*ddns*" -exec mv -f {} /upload/packages/ \;.
+          find ./bin/packages/ -iname "*alist*" -exec mv -f {} /upload/packages/ \;
+          find ./bin/packages/ -iname "*mosdns*" -exec mv -f {} /upload/packages/ \;
+          find ./bin/packages/ -iname "*ddns*" -exec mv -f {} /upload/packages/ \;
           tar -zcvf packages.tar.gz -C /upload/packages .
           cp -f ./packages.tar.gz ./upload/packages.tar.gz
           cp -f ./.config ./upload/Config_"$WRT_TARGET"_"$WRT_VER"_"$WRT_DATE".txt
