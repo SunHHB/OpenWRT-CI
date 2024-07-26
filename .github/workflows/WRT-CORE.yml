@@ -215,6 +215,8 @@ jobs:
           cd ./wrt/ && mkdir -p ./upload/packages/
           find ./bin/packages/ -iname "*alist*" -exec mv -f {} ./upload/packages/ \;
           find ./bin/packages/ -iname "*mosdns*" -exec mv -f {} ./upload/packages/ \;
+          find ./bin/packages/ -iname "*v2dat*" -exec mv -f {} ./upload/packages/ \;
+          find ./bin/packages/ -iname "*v2ray*" -exec mv -f {} ./upload/packages/ \;
           find ./bin/packages/ -iname "*ddns*" -exec mv -f {} ./upload/packages/ \;
           tar -zcvf packages.tar.gz -C ./upload/packages .
           cp -f ./packages.tar.gz ./upload/packages.tar.gz
