@@ -4,6 +4,8 @@
 sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改默认WIFI名
 sed -i "s/\.ssid=.*/\.ssid=$WRT_WIFI/g" $(find ./package/kernel/mac80211/ ./package/network/config/ -type f -name "mac80211.*")
+ #replace the default startup script and configuration of Tailscale
+sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ./packages/net/tailscale/Makefile
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
 #修改默认IP地址
