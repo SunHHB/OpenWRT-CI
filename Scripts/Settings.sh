@@ -6,9 +6,9 @@ sed -i "s/luci-theme-bootstrap/luci-theme-$WRT_THEME/g" $(find ./feeds/luci/coll
 sed -i "s/\.ssid=.*/\.ssid=$WRT_WIFI/g" $(find ./package/kernel/mac80211/ ./package/network/config/ -type f -name "mac80211.*")
 
 #replace the default startup script and configuration of Tailscale
-sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ./packages/net/tailscale/Makefile
-sed -i "s/1.58.2/1.72.1/g" ./packages/net/tailscale/Makefile
-sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/21b529e85144f526b61e0998c8b7885d53f17cba21252e5c7252c4014f5f507b/g" ./packages/net/tailscale/Makefile
+sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ./feeds/packages/net/tailscale/Makefile
+sed -i "s/1.58.2/1.72.1/g" ./feeds/packages/net/tailscale/Makefile
+sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/21b529e85144f526b61e0998c8b7885d53f17cba21252e5c7252c4014f5f507b/g" ./feeds/packages/net/tailscale/Makefile
 
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
