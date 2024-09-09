@@ -8,6 +8,9 @@ sed -i "s/\.ssid=.*/\.ssid=$WRT_WIFI/g" $(find ./package/kernel/mac80211/ ./pack
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ./packages/net/tailscale/Makefile
 #replace the default startup script and configuration of Tailscale
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' $(find ./packages/net/tailscale/ -type f -name "Makefile")
+sed -i "s/1.58.2/1.72.1/g" $(find ./packages/net/tailscale/ -type f -name "Makefile")
+sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/21b529e85144f526b61e0998c8b7885d53f17cba21252e5c7252c4014f5f507b/g" $(find ./packages/net/tailscale/ -type f -name "Makefile")
+
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
 #修改默认IP地址
