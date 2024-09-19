@@ -7,8 +7,8 @@ sed -i "s/\.ssid=.*/\.ssid=$WRT_WIFI/g" $(find ./package/kernel/mac80211/ ./pack
 
 #replace the default startup script and configuration of Tailscale
 sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' ./feeds/packages/net/tailscale/Makefile
-sed -i "s/1.58.2/1.72.1/g" ./feeds/packages/net/tailscale/Makefile
-sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/21b529e85144f526b61e0998c8b7885d53f17cba21252e5c7252c4014f5f507b/g" ./feeds/packages/net/tailscale/Makefile
+sed -i "s/1.58.2/1.74.1/g" ./feeds/packages/net/tailscale/Makefile
+sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/ef7b8a76ce81133dc10f243d733302c070232cdd6594b685c6adbf32769d4f2c/g" ./feeds/packages/net/tailscale/Makefile
 
 
 CFG_FILE="./package/base-files/files/bin/config_generate"
