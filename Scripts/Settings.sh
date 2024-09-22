@@ -11,6 +11,10 @@ sed -i "s/1.58.2/1.74.1/g" ./feeds/packages/net/tailscale/Makefile
 sed -i "s/452f355408e4e2179872387a863387e06346fc8a6f9887821f9b8a072c6a5b0a/ef7b8a76ce81133dc10f243d733302c070232cdd6594b685c6adbf32769d4f2c/g" ./feeds/packages/net/tailscale/Makefile
 
 
+#replace the default PKG_VERSION of frp
+sed -i "s/0.51.3/0.60.0/g" ./feeds/packages/net/frp/Makefile
+sed -i "s/83032399773901348c660d41c967530e794ab58172ccd070db89d5e50d915fef/8feaf56fc3f583a51a59afcab1676f4ccd39c1d16ece08d849f8dc5c1e5bff55/g" ./feeds/packages/net/frp/Makefile
+
 CFG_FILE="./package/base-files/files/bin/config_generate"
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
