@@ -32,6 +32,7 @@ UPDATE_PACKAGE "homeproxy" "SunHHB/luci-app-homeproxy" "master"
 UPDATE_PACKAGE "mihomo" "SunHHB/mihomo" "main"
 UPDATE_PACKAGE "luci-app-frp" "SunHHB/frp" "main"
 UPDATE_PACKAGE "luci-app-tailscale" "SunHHB/luci-app-tailscale" "main"
+UPDATE_PACKAGE "SunHHB/luci-app-nekoclash" "Thaolga/luci-app-nekoclash" "neko"
 
 #UPDATE_PACKAGE "advancedplus" "VIKINGYFY/luci-app-advancedplus" "main"
 #UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
