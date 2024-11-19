@@ -222,7 +222,10 @@ jobs:
           find ./bin/packages/ -iname "*mihomo*" -exec mv -f {} ./upload/packages/ \;
           find ./bin/packages/ -iname "*tailscale*" -exec mv -f {} ./upload/packages/ \;
           find ./bin/packages/ -iname "*frp*" -exec mv -f {} ./upload/packages/ \;
+          find ./bin/packages/ -iname "*phtunnel*" -exec mv -f {} ./upload/packages/ \;
+
           find ./bin/packages/ -iname "*nekoclash*" -exec mv -f {} ./upload/packages/ \;
+          
           
           
           tar -zcvf packages.tar.gz -C ./upload/packages .
