@@ -32,7 +32,7 @@ UPDATE_PACKAGE "homeproxy" "SunHHB/luci-app-homeproxy" "master"
 UPDATE_PACKAGE "mihomo" "SunHHB/mihomo" "main"
 UPDATE_PACKAGE "luci-app-frp" "SunHHB/frp" "main"
 UPDATE_PACKAGE "luci-app-tailscale" "SunHHB/luci-app-tailscale" "main"
-UPDATE_PACKAGE "phtunnel" "SunHHB/phtunnel" "main"
+
 
 UPDATE_PACKAGE "SunHHB/luci-app-nekoclash" "Thaolga/luci-app-nekoclash" "neko"
 
